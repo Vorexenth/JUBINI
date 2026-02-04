@@ -1,0 +1,54 @@
+# NOHS Website - Multi-Page Structure
+
+Your website has been reorganized into separate HTML files for each section!
+
+## File Structure
+
+```
+nohs-website/
+│
+├── index.html          (Home page with carousel)
+├── about.html          (About section)
+├── developers.html     (Developers section)
+├── achievements.html   (Achievements section)
+├── location.html       (Location section)
+├── contact.html        (Contact form section)
+│
+├── css/
+│   └── style.css       (All your styles)
+│
+├── js/
+│   ├── carousel.js     (Home page carousel functionality)
+│   └── contact.js      (Contact form functionality)
+│
+└── images/             (Your existing images folder)
+    ├── logonohs.png
+    ├── rizal.png
+    ├── mainbg.png
+    ├── prinsi.jpg
+    ├── rizal2.png
+    ├── titsir.jpg
+    ├── titsir2.jpg
+    ├── tecee.jpg
+    ├── tisi.jpg
+    ├── mapnohs.png
+    ├── youtube.png
+    └── facebook.png
+```
+
+## What Changed?
+
+✅ **Separate HTML files** - Each section now has its own page
+✅ **Working navigation** - Click any nav link to go to that page
+✅ **Active state** - Current page is highlighted in the navigation
+✅ **Shared styles** - All pages use the same CSS file
+✅ **Organized JavaScript** - Carousel code only loads on home page, contact form only on contact page
+✅ **Same design** - Everything looks and works exactly like before!
+
+## How to Use
+
+1. Copy your existing `images/` folder into the `nohs-website/` directory
+2. Open `index.html` in your browser
+3. Navigate between pages using the menu
+
+All functionality is preserved - the carousel still works on the home page, and the contact form still works on the contact page!
