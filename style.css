@@ -1,0 +1,263 @@
+/* Reset and base */
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff, #f9f1e7);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* si rizal sa likod sang maroon */
+header {
+  background:
+    linear-gradient(rgba(128, 0, 0, 0.65), rgba(128, 0, 0, 0.65)),
+    url("../images/rizal.png") center/cover no-repeat;
+  color: #ffffff;
+  padding: 1.25rem 1rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ang space between logo and main title*/
+header .title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 75px;
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+
+/* logo */
+header .logo {
+  height: 160px;
+  width: 160px;
+  margin-top:20px;
+  margin-left: 20px;
+  border-radius: 50%;
+  margin-bottom: 0.1%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+/* main title*/
+header .title-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.05;
+}
+
+/* tagline*/
+header .title-text .tagline {
+  font-size: 1.5rem;
+  margin: 6px 0 0;
+  font-style: italic;
+  color: #ffd700;
+}
+
+/* size sang maroon sa babaw */
+nav {
+  margin-top: .02px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* horizontal line spaces sang sections */
+nav a {
+  color: #ffd700;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transform: translateY(0);
+}
+
+nav a:hover {
+  color: #ffffff;
+  background: rgba(255, 215, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+nav a.active {
+  color: #ffffff;
+  background: rgba(255, 215, 0, 0.12);
+}
+
+/* Main layout */
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.25rem;
+}
+
+/* Sections */
+section {
+  display: none;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+section.active { 
+  display: block; 
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(128, 0, 0, 0.15);
+}
+
+h2 {
+  color: maroon;
+  border-bottom: 2px solid gold;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+/* --- Home section with carousel background --- */
+#home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;        /* full viewport height */
+  overflow: hidden;         /* hides overflow from slides */
+  background: #000;         /* fallback background */
+}
+
+/* --- Carousel styles (background) --- */
+.carousel {
+  position: absolute;       /* sits behind content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;             /* fills the section */
+  margin: 0;
+  z-index: 0;               /* behind text */
+}
+
+.carousel-track-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-track {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.45s ease;
+  width: 100%;
+  position: relative;
+  height: 100%;             /* match section height */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  transition: transform 0.45s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: obtain;         /* cover background nicely */
+  display: block;
+}
+/* Ensure text is above carousel background */
+#home h2,
+.hero-tagline {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Footer */
+footer {
+  background: maroon;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer .social-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+footer .social-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+footer .social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .carousel-track { height: 100%; }
+  header .logo { height: 120px; width: 120px; }
+  header .title-text h1 { font-size: 1.6rem; }
+}
+
+@media (max-width: 520px) {
+  .carousel-track { height: 100%; }
+  nav { gap: 6px; }
+}
+
+/* Hero tagline styling */
+.hero-tagline {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+/* Hide carousel by default */
+.carousel {
+  display: none;
+}
+
+/* Show carousel only when Home section is active */
+#home.active .carousel {
+  display: block;
+  position: absolute;       /* sits behind content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;             /* fills the section */
+  margin: 0;
+  z-index: 0;               /* behind text */
+}
