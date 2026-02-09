@@ -95,6 +95,11 @@ nav a.active {
   background: rgba(255, 215, 0, 0.12);
 }
 
+nav a:focus {
+  outline: 2px solid gold;
+  outline-offset: 4px;
+}
+
 /* Main layout */
 main {
   flex-grow: 1;
@@ -143,20 +148,20 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;        /* full viewport height */
-  overflow: hidden;         /* hides overflow from slides */
-  background: #000;         /* fallback background */
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000;
 }
 
 /* --- Carousel styles (background) --- */
 .carousel {
-  position: absolute;       /* sits behind content */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;             /* fills the section */
+  height: 100%;
   margin: 0;
-  z-index: 0;               /* behind text */
+  z-index: 0;
 }
 
 .carousel-track-wrapper {
@@ -172,7 +177,7 @@ h2 {
   transition: transform 0.45s ease;
   width: 100%;
   position: relative;
-  height: 100%;             /* match section height */
+  height: 100%;
 }
 
 .carousel-slide {
@@ -187,9 +192,10 @@ h2 {
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: obtain;         /* cover background nicely */
+  object-fit: cover;
   display: block;
 }
+
 /* Ensure text is above carousel background */
 #home h2,
 .hero-tagline {
@@ -205,6 +211,12 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
 footer .social-links {
@@ -225,16 +237,70 @@ footer .social-icon:hover {
   transform: scale(1.1);
 }
 
+/* Footer Content - Side by Side */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Footer Image (Left) */
+.footer-image {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-pic {
+  max-width: 100%;
+  width: 40em;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Footer Location Map (Right) */
+.footer-location {
+  flex: 1;
+  text-align: right;
+}
+
+.location-map {
+  max-width: 600px;
+  width: 100%;
+  height: 20em;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .carousel-track { height: 100%; }
   header .logo { height: 120px; width: 120px; }
   header .title-text h1 { font-size: 1.6rem; }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-location {
+    text-align: left;
+  }
 }
 
 @media (max-width: 520px) {
   .carousel-track { height: 100%; }
   nav { gap: 6px; }
+  .footer-pic {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .location-map {
+    max-width: 100%;
+  }
 }
 
 /* Hero tagline styling */
@@ -253,11 +319,35 @@ footer .social-icon:hover {
 /* Show carousel only when Home section is active */
 #home.active .carousel {
   display: block;
-  position: absolute;       /* sits behind content */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;             /* fills the section */
+  height: 100%;
   margin: 0;
-  z-index: 0;               /* behind text */
+  z-index: 0;
 }
+
+/* Academics Page Styles */
+.academic-content {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.academic-content h3 {
+  color: maroon;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.program-card {
+  background: linear
