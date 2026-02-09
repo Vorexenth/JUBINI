@@ -16,13 +16,12 @@
         <p class="tagline">Culture of Excellence</p>
       </div>
     </div>
-
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="developers.html">Developers</a>
+      <a href="academics.html">Academics</a>
       <a href="achievements.html">Achievements</a>
-      <a href="location.html">Location</a>
+      <a href="developers.html">Developers</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
@@ -30,30 +29,157 @@
   <main>
     <section id="contact" class="section active">
       <h2>Contact Us</h2>
-      <form onsubmit="submitForm(event)">
-        <label>Name:</label><br>
-        <input type="text" name="name" id="name"><br>
-        <label>Email:</label><br>
-        <input type="email" name="email" id="email"><br>
-        <label>Message:</label><br>
-        <textarea name="message" id="message"></textarea><br>
-        <button type="submit">Send</button>
-      </form>
+      <p class="contact-intro">We'd love to hear from you! Reach out with any questions or inquiries.</p>
+
+      <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Address</h4>
+              <p>Negros Occidental High School<br>
+              Gatuslao Street, Bacolod City<br>
+              Negros Occidental, Philippines 6100</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p>Tel: (034) XXX-XXXX<br>
+              Mobile: +63 XXX XXX XXXX</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>info@nohs.edu.ph<br>
+              registrar@nohs.edu.ph</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-details">
+              <h4>Office Hours</h4>
+              <p>Monday - Friday: 7:30 AM - 5:00 PM<br>
+              Saturday: 8:00 AM - 12:00 PM<br>
+              Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="social-connect">
+            <h4>Connect With Us</h4>
+            <div class="social-buttons">
+              <a href="https://www.facebook.com/nohsbacolod2002" target="_blank" class="social-btn facebook">
+                <img src="images/facebook.png" alt="Facebook"> Facebook
+              </a>
+              <a href="https://www.youtube.com/channel/UCJWV9ZfwsxAW-KTu_v9snTg" target="_blank" class="social-btn youtube">
+                <img src="images/youtube.png" alt="YouTube"> YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+63 XXX XXX XXXX">
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="enrollment">Enrollment Inquiry</option>
+                <option value="admissions">Admissions Information</option>
+                <option value="academics">Academic Programs</option>
+                <option value="general">General Question</option>
+                <option value="feedback">Feedback/Suggestions</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="map-section">
+        <h3>Find Us on the Map</h3>
+        <div class="map-container">
+          <img src="images/mapnohs.png" alt="NOHS Location Map" class="location-map-large">
+          <p class="map-caption">Located in the heart of Bacolod City, easily accessible by public transportation</p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="quick-links-section">
+        <h3>Helpful Resources</h3>
+        <div class="quick-links-grid">
+          <a href="academics.html" class="quick-link-card">
+            <div class="quick-link-icon">📚</div>
+            <h4>Academic Programs</h4>
+            <p>Learn about our curriculum</p>
+          </a>
+          <a href="about.html" class="quick-link-card">
+            <div class="quick-link-icon">ℹ️</div>
+            <h4>About NOHS</h4>
+            <p>Our history and mission</p>
+          </a>
+          <a href="achievements.html" class="quick-link-card">
+            <div class="quick-link-icon">🏆</div>
+            <h4>Achievements</h4>
+            <p>View our awards</p>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Negros Occidental High School</p>
+    <div class="footer-content">
+      <div class="footer-image">
+        <img src="images/piksur.png" alt="School Building" class="footer-pic">
+      </div>
+      <div class="footer-location">
+        <img src="images/mapnohs.png" alt="NOHS Map" class="location-map">
+      </div>
+    </div>
+    <p>&copy; 2026 Negros Occidental High School. All Rights Reserved.</p>
     <div class="social-links">
-      <a href="https://www.youtube.com/channel/UCJWV9ZfwsxAW-KTu_v9snTg" target="_blank">
+      <a href="https://www.youtube.com/channel/UCJWV9ZfwsxAW-KTu_v9snTg" target="_blank" aria-label="YouTube">
         <img src="images/youtube.png" alt="YouTube" class="social-icon">
       </a>
-      <a href="https://www.facebook.com/nohsbacolod2002" target="_blank">
+      <a href="https://www.facebook.com/nohsbacolod2002" target="_blank" aria-label="Facebook">
         <img src="images/facebook.png" alt="Facebook" class="social-icon">
       </a>
     </div>
   </footer>
-
-  <script src="js/contact.js"></script>
 </body>
 </html>

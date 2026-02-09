@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,48 +17,109 @@
       </div>
     </div>
     <nav>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
-      <a href="developers.html">Developers</a>
-      <a href="achievements.html">Achievements</a>
       <a href="academics.html">Academics</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="developers.html">Developers</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <section id="home" class="section active">
-      <h2>Welcome</h2>
+    <section id="home" class="section active home-section">
+      <!-- Hero Carousel Background -->
       <div class="carousel" aria-roledescription="carousel">
         <div class="carousel-track-wrapper">
           <ul class="carousel-track">
-            <li class="carousel-slide"><img src="images/mainbg.png" alt="Slide 1"></li>
-            <li class="carousel-slide"><img src="images/prinsi.jpg" alt="Slide 2"></li>
-            <li class="carousel-slide"><img src="images/rizal2.png" alt="Slide 3"></li>
-            <li class="carousel-slide"><img src="images/titsir.jpg" alt="Slide 4"></li>
-            <li class="carousel-slide"><img src="images/titsir2.jpg" alt="Slide 5"></li>
+            <li class="carousel-slide active"><img src="images/mainbg.png" alt="Campus View"></li>
+            <li class="carousel-slide"><img src="images/prinsi.jpg" alt="Principal"></li>
+            <li class="carousel-slide"><img src="images/rizal2.png" alt="Rizal Monument"></li>
+            <li class="carousel-slide"><img src="images/titsir.jpg" alt="Teachers"></li>
+            <li class="carousel-slide"><img src="images/titsir2.jpg" alt="Faculty"></li>
           </ul>
         </div>
       </div>
-      <p class="hero-tagline">Empowering Minds for a Brighter Future</p>
+      
+      <!-- Content overlay on top of carousel -->
+      <div class="home-content">
+        <div class="carousel-overlay">
+          <h2>Welcome to NOHS</h2>
+          <p class="hero-tagline">Empowering Minds for a Brighter Future</p>
+        </div>
+
+      <!-- Quick Info Cards -->
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-icon">📚</div>
+          <h3>Excellence in Education</h3>
+          <p>Providing quality education since our founding</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🎓</div>
+          <h3>Holistic Development</h3>
+          <p>Nurturing academic, cultural, and personal growth</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🏆</div>
+          <h3>Award-Winning School</h3>
+          <p>Recognized for outstanding achievements</p>
+        </div>
+      </div>
+
+      <!-- News & Announcements -->
+      <div class="news-section">
+        <h2>Latest News & Announcements</h2>
+        <div class="news-grid">
+          <div class="news-item">
+            <img src="images/news1.jpg" alt="News 1" class="news-image">
+            <div class="news-content">
+              <h3>Enrollment Now Open</h3>
+              <p class="news-date">February 2026</p>
+              <p>Enrollment for Academic Year 2026-2027 is now open. Visit our registrar's office for more details.</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="images/news2.jpg" alt="News 2" class="news-image">
+            <div class="news-content">
+              <h3>Science Fair Success</h3>
+              <p class="news-date">January 2026</p>
+              <p>NOHS students won first place at the Regional Science Fair with their innovative research project.</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="images/news3.jpg" alt="News 3" class="news-image">
+            <div class="news-content">
+              <h3>Cultural Festival</h3>
+              <p class="news-date">December 2025</p>
+              <p>Annual cultural festival showcased the rich heritage and talents of our students.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
   <footer>
     <div class="footer-content">
       <div class="footer-image">
-        <img src="images/piksur.png" alt="Footer Image" class="footer-pic">
+        <img src="images/piksur.png" alt="School Building" class="footer-pic">
       </div>
       <div class="footer-location">
         <img src="images/mapnohs.png" alt="NOHS Map" class="location-map">
       </div>
     </div>
-    <p>&copy; 2026 Negros Occidental High School</p>
+    <p>&copy; 2026 Negros Occidental High School. All Rights Reserved.</p>
     <div class="social-links">
-      <a href="https://www.youtube.com/channel/UCJWV9ZfwsxAW-KTu_v9snTg" target="_blank">
+      <a href="https://www.youtube.com/channel/UCJWV9ZfwsxAW-KTu_v9snTg" target="_blank" aria-label="YouTube">
         <img src="images/youtube.png" alt="YouTube" class="social-icon">
       </a>
-      <a href="https://www.facebook.com/nohsbacolod2002" target="_blank">
+      <a href="https://www.facebook.com/nohsbacolod2002" target="_blank" aria-label="Facebook">
         <img src="images/facebook.png" alt="Facebook" class="social-icon">
       </a>
     </div>
   </footer>
+  
   <script src="js/carousel.js"></script>
 </body>
 </html>
