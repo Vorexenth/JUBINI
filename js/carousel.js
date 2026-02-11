@@ -1,34 +1,46 @@
-// Carousel functionality for NOHS website
+// Carousel functionality for home page
 document.addEventListener('DOMContentLoaded', function() {
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const slideCount = slides.length;
+  const slides = document.querySelectorAll('.carousel-slide');
   let currentSlide = 0;
 
-  // Hide all slides initially
-  slides.forEach(slide => {
-    slide.classList.remove('active');
-    slide.style.opacity = '0';
-  });
+  // Only run if carousel slides exist (on home page)
+  if (slides.length > 0) {
+    function showSlide(index) {
+      // Remove active class from all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
 
-  // Show first slide
-  slides[0].classList.add('active');
-  slides[0].style.opacity = '1';
+      // Add active class to current slide
+      slides[index].classList.add('active');
+    }
 
-  // Function to show next slide
-  function showNextSlide() {
-    // Hide current slide
-    slides[currentSlide].classList.remove('active');
-    slides[currentSlide].style.opacity = '0';
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
 
-    // Move to next slide
-    currentSlide = (currentSlide + 1) % slideCount;
+    // Auto-advance slides every 4 seconds
+    setInterval(nextSlide, 4000);
 
-    // Show next slide
-    slides[currentSlide].classList.add('active');
-    slides[currentSlide].style.opacity = '1';
+    // Initialize first slide
+    showSlide(0);
   }
 
-  // Auto-advance carousel every 3 seconds
-  setInterval(showNextSlide, 3000);
+  // News section toggle functionality
+  const newsSection = document.querySelector('.news-section');
+  if (newsSection) {
+    const newsHeading = newsSection.querySelector('h2');
+    if (newsHeading) {
+      newsHeading.addEventListener('click', function() {
+        newsSection.classList.toggle('collapsed');
+      });
+    }
+    
+    // Hide news section if not on home page
+    const homeSection = document.querySelector('.home-section');
+    if (!homeSection || !homeSection.classList.contains('active')) {
+      newsSection.style.display = 'none';
+    }
+  }
 });
